@@ -8,7 +8,7 @@ import serviceFourImage from "../../../public/images/service-four.png";
 
 const Service = () => {
   return (
-    <section className="container py-[75px]">
+    <section id="services" className="container pt-[145px]">
       <Header
         heading={"Services"}
         description={"Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium"}

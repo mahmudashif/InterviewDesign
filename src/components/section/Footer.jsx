@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../../public/images/user-logo.png";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
 import { navitem } from "../../data/navItem";
 
 const Footer = () => {
@@ -15,24 +14,23 @@ const Footer = () => {
   return (
     <section>
       <div className="pt-[100px] pb-[62px] bg-[#f8f8f8] flex flex-col gap-y-[75px]">
-        <div className="w-[200px] mx-auto">
+        <a href="#" className="w-[200px] mx-auto">
           <img src={logo} alt="user-logo" className="w-full" />
-        </div>
+        </a>
 
         <ul className="flex justify-center items-center gap-x-10">
           {navitem.map((menu, index) => (
             <li>
-              <NavLink
+              <a
                 key={index}
-                to={menu.path}
-                className={({ isActive }) =>
-                  isActive
-                    ? "font-poppins text-[21px] text-primary-color font-medium"
-                    : "font-poppins text-[21px] text-black font-medium hover:text-primary-color transition-all duration-150 ease-in-out"
+                href={menu.path}
+                onClick={() => setActive(menu.item)}
+                className={
+                  "font-poppins text-[20px] font-normal text-[#000] relative z-10 hover:text-primary-color after:absolute after:-bottom-[1px] after:left-2/4 after:-translate-x-2/4 after:w-[0%] hover:after:w-[120%] after:h-[2.5px] after:bg-primary-color after:rounded-[8px] after:-z-10 after:transition-all after:duration-150 after:ease-in-out"
                 }
               >
                 {menu.item}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>

@@ -5,7 +5,7 @@ import Skill from "../layout/Skill";
 
 const AboutMe = () => {
   return (
-    <section className="container flex items-center py-[75px]">
+    <section id="about-me" className="container flex items-center pt-[140px]">
       <div className="w-[45%]">
         <div>
           <img
@@ -24,7 +24,7 @@ const AboutMe = () => {
         />
 
         <div className="mt-4">
-          <Skill name={"UI"} percentage={"90"} />
+          <Skill name={"UI"} percentage={"100"} />
           <Skill name={"Web Design "} percentage={"85"} />
           <Skill name={"App Design"} percentage={"75"} />
           <Skill name={"Graphic Design"} percentage={"90"} />

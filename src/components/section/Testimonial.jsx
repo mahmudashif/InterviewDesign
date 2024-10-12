@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestimonialCard from "../layout/TestimonialCard";
-import clientOne from "../../../public/images/client-one.png";
+import { tesimonials } from "../../data/tesimonials";
 
 const Testimonial = () => {
   const [dotActive, setDotActive] = useState(0);
@@ -56,61 +56,30 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="container px-3 md:px-0 py-[75px] mt-[40px]">
+    <section id="testimonials" className="container px-3 md:px-0 pt-[145px]">
       <Header
         heading={"Testimonials"}
         description={
           "Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus"
         }
-        className={"text-center px-2 md:px-0 w-full md:w-[900px] mx-auto mb-[50px]"}
+        className={
+          "text-center px-2 md:px-0 w-full md:w-[900px] mx-auto mb-[50px]"
+        }
       />
 
       <div className="w-full md:w-[1050px] mx-auto">
         <div className="slider-container">
           <Slider {...settings}>
-            <div>
-              <TestimonialCard
-                image={clientOne}
-                word={
-                  "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices."
-                }
-                name={"Ahmed Shanto"}
-                position={"CEO"}
-              />
-            </div>
-            
-            <div>
-              <TestimonialCard
-                image={clientOne}
-                word={
-                  "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices."
-                }
-                name={"Ahmed Shanto"}
-                position={"CEO"}
-              />
-            </div>
-
-            <div>
-              <TestimonialCard
-                image={clientOne}
-                word={
-                  "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices."
-                }
-                name={"Ahmed Shanto"}
-                position={"CEO"}
-              />
-            </div>
-
-            <div>
-              <TestimonialCard
-                image={clientOne}
-                word={
-                  "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices."
-                }
-                name={"Ahmed Shanto"}
-                position={"CEO"}
-              />
-            </div>
+            {tesimonials.map((item, index) => (
+              <div>
+                <TestimonialCard
+                  image={item.image}
+                  word={item.word}
+                  name={item.name}
+                  position={item.position}
+                />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>

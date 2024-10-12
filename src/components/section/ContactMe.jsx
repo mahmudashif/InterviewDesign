@@ -4,7 +4,7 @@ import Button from "../layout/Button";
 
 const ContactMe = () => {
   return (
-    <section className="pt-[75px] pb-[130px]">
+    <section id="contact" className="pt-[145px] pb-[130px]">
       <Header
         heading={"Lets Design Together"}
         description={

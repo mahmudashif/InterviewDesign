@@ -1,33 +1,26 @@
 import React from "react";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
-import Services from "./pages/Services";
-import Project from "./pages/Project";
-import Testimonials from "./pages/Testimonials";
-import Contact from "./pages/Contact";
+import Navbar from "./components/section/Navbar";
+import Hero from "./components/section/Hero";
+import AboutMe from "./components/section/AboutMe";
+import Service from "./components/section/Service";
+import MyProject from "./components/section/MyProject";
+import Testimonial from "./components/section/Testimonial";
+import ContactMe from "./components/section/ContactMe";
+import Footer from "./components/section/Footer";
 
 const App = () => {
-  let router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route element={<Layout />}>
-        <Route path="" element={<Home />} />
-        <Route path="/about-me" element={<AboutUs />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/contact" element={<Contact />} />
-      </Route>
-    )
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <AboutMe />
+      <Service />
+      <MyProject />
+      <Testimonial />
+      <ContactMe />
+      <Footer />
+    </>
   );
-  
-  return <RouterProvider router={router} />;
 };
 
 export default App;

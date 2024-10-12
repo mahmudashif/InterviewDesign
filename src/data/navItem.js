@@ -1,26 +1,26 @@
 export let navitem = [
   {
     item: "Home",
-    path: "/",
+    path: "#home",
   },
   {
     item: "About me",
-    path: "/about-me",
+    path: "#about-me",
   },
   {
     item: "Services",
-    path: "/services",
+    path: "#services",
   },
   {
     item: "Project",
-    path: "/project",
+    path: "#project",
   },
   {
     item: "Testimonials",
-    path: "/testimonials",
+    path: "#testimonials",
   },
   {
     item: "Contact",
-    path: "/contact",
+    path: "#contact",
   },
 ];

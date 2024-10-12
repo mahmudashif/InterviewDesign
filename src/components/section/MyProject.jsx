@@ -1,9 +1,7 @@
 import React, { act, useState } from "react";
 import Header from "../layout/Header";
 import ProjectCard from "../layout/ProjectCard";
-import projectOneImage from "../../../public/images/project-one.png";
-import projectTwoImage from "../../../public/images/project-two.png";
-import projectThreeImage from "../../../public/images/project-three.png";
+import { ProjectList } from "../../data/ProjectList";
 
 const MyProject = () => {
   let category = [
@@ -16,77 +14,14 @@ const MyProject = () => {
 
   const [active, setActive] = useState(category[0].text);
 
-  let project = [
-    {
-      name: "AirCalling Landing Page Design",
-      category: "UI/UX",
-      thumbnail: projectOneImage,
-    },
-    {
-      name: "Business Landing Page",
-      category: "Web Design",
-      thumbnail: projectTwoImage,
-    },
-    {
-      name: "AirCalling Landing Page Design",
-      category: "App Design",
-      thumbnail: projectThreeImage,
-    },
-    {
-      name: "Ecom Web Page Design",
-      category: "Graphic Design",
-      thumbnail: projectTwoImage,
-    },
-    {
-      name: "Orebi ecommarce",
-      category: "UI/UX",
-      thumbnail: projectThreeImage,
-    },
-    {
-      name: "Ripple social media",
-      category: "Web Design",
-      thumbnail: projectOneImage,
-    },
-    {
-      name: "shopify e-commarce",
-      category: "App Design",
-      thumbnail: projectTwoImage,
-    },
-    {
-      name: "Business Landing Page",
-      category: "Graphic Design",
-      thumbnail: projectThreeImage,
-    },
-    {
-      name: "AirCalling Landing Page Design",
-      category: "UI/UX",
-      thumbnail: projectOneImage,
-    },
-    {
-      name: "Business Landing Page",
-      category: "Web Design",
-      thumbnail: projectTwoImage,
-    },
-    {
-      name: "AirCalling Landing Page Design",
-      category: "App Design",
-      thumbnail: projectThreeImage,
-    },
-    {
-      name: "Business Landing Page",
-      category: "Graphic Design",
-      thumbnail: projectTwoImage,
-    },
-  ];
-
-  const result = project.filter(checkProject);
+  const result = ProjectList.filter(checkProject);
 
   function checkProject(project) {
     return active === category[0].text ? project : project.category == active;
   }
 
   return (
-    <section className="container py-[75px]">
+    <section id="project" className="container pt-[145px]">
       <Header
         heading={"My Projects"}
         description={

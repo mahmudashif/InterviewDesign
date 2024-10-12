@@ -12,7 +12,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="container flex items-center pt-[150px] pb-[70px]">
+    <section id="home" className="container flex items-center pt-[150px]">
       <div className="w-[60%]">
         <p className="font-poppins font-semibold text-xl tracking-[3%] text-black">
           Hi I am
