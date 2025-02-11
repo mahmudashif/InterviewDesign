@@ -55,6 +55,7 @@ const Footer = () => {
           © 2023 <span className="text-primary-color">Mumair</span> All Rights
           Reserved , Inc.
         </p>
+        <p>tmr heda</p>
       </div>
     </section>
   );
